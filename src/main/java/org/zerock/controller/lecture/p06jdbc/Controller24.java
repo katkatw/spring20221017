@@ -19,7 +19,7 @@ import org.zerock.domain.lecture.Customer;
 
 @Controller
 @RequestMapping("ex24")
-public class Controller24 {
+public class Controller24 { 
 	
 	@Autowired
 	private DataSource dataSource;
