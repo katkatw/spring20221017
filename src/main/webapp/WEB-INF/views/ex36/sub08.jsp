@@ -10,9 +10,14 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
+	<c:if test="${not empty message }">
+		<div>
+			${message }
+		</div>
+	</c:if>
 	<h1>공급자 정보 입력하기</h1>
 	<form action="" method="post">
-	<!-- (input+br)*8+input:s -->
+	<!-- (input+br)*7+input:s -->
 	<input type="text" placeholder="이름" value="julia Garber" name="supplierName">
 	<br>
 	<input type="text" placeholder="공급명" value="JJ's World" name="contactName">	
