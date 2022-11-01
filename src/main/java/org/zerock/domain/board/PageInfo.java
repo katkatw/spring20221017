@@ -9,5 +9,9 @@ public class PageInfo {
 	private int leftPageNumber;
 	private int rightPageNumber;
 	private int currentPageNumber;
-		
+	private boolean hasPrevButton;
+	private boolean hasNextButton;
+	private int jumpPrevPageNumber;
+	private int jumpNextPageNumber;
+
 }
