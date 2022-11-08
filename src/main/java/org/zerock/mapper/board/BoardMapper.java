@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.zerock.domain.board.BoardDto;
 
-
 public interface BoardMapper {
+
 	
 	int insert(BoardDto board);
 
@@ -18,4 +18,15 @@ public interface BoardMapper {
 	int delete(int id);
 
 	int countAll(String type, String keyword);
-} 
+
+	int insertFile(int id, String fileName);
+
+}
+
+
+
+
+
+
+
+
