@@ -5,44 +5,58 @@
   
 <mapper namespace="org.zerock.mapper.member.MemberMapper">
 
+	<select id="selectByEmail" resultType="org.zerock.domain.member.MemberDto">
+	SELECT 
+		id,
+		password,
+		email,
+		inserted
+	FROM
+		Member
+	WHERE
+		email = #{email}
+	</select>
+
 	<delete id="deleteById">
 	DELETE FROM Member
 	WHERE id = #{id}
 	</delete>
-	
+
 	<update id="update">
 	UPDATE Member
-	SET  
-		password = #{password}, 
+	SET
+		password = #{password},
 		email = #{email}
 	WHERE
 		id = #{id}
-	</update>	
 	
+	</update>
+
 	<select id="selectById" resultType="org.zerock.domain.member.MemberDto">
 	SELECT 
-		id,  
-		password, 
+		id,
+		password,
 		email,
 		inserted
 	FROM
 		Member
 	WHERE
 		id = #{id}
-	</select>	
 	
+	</select>
+
 	<select id="selectAll" resultType="org.zerock.domain.member.MemberDto">
 	SELECT 
-		id,  
-		'숨김' password, 
+		id,
+		'숨김' password,
 		email,
 		inserted
 	FROM
 		Member
 	ORDER BY
-		id
+		id 
 	</select>
-	
+
 	<insert id="insert">
 	INSERT INTO Member (id, password, email)
 	VALUES (#{id}, #{password}, #{email})
